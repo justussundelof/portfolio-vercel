@@ -9,13 +9,13 @@ export default function Portfolio() {
   const GITHUB_USERNAME = "your-github-username";
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+    fetch(`https://api.github.com/users/justussundelof/repos`)
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
       });
 
-    fetch(`https://api.github.com/users/${GITHUB_USERNAME}`)
+    fetch(`https://api.github.com/users/justussundelof`)
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
